@@ -11,6 +11,31 @@ ERROR CASES: Return '\0' for invalid inputs.
 NOTES:
 */
 
+int xstrlen(char *ptr){
+	int len = 0;
+	while (*ptr++ != '\0')
+		len++;
+	return len;
+}
+
+
+
+
+
 char KthIndexFromEnd(char *str, int K) {
-	return '\0';
+
+	int slen = 0;
+
+	if ( K < 0)
+		return '\0';
+	
+	if (str == nullptr)
+		return '\0';
+
+	else{
+		slen = xstrlen(str);
+		return str[slen - K - 1];
+	}
+		
+	
 }
