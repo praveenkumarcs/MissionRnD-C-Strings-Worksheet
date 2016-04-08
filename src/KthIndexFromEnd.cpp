@@ -26,11 +26,15 @@ char KthIndexFromEnd(char *str, int K) {
 
 	int slen = 0;
 
-	if ( K < 0)
-		return '\0';
-	
 	if (str == nullptr)
 		return '\0';
+
+	if ( K < 0)
+		return '\0';
+
+	if (xstrlen(str) == 0)
+		return '\0';
+	
 
 	else{
 		slen = xstrlen(str);

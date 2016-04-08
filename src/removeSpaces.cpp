@@ -20,6 +20,13 @@ char* removeSpaces(char *str) {
 
 	if (str == NULL)
 		return '\0';
+	for (i = 0; str[i] != '\0'; i++){
+		if (str[i] == ' ')
+			break;
+	}
+	if (str[i] == '\0')
+		return str;
+		
 
 	for (i = 0; str[i] != '\0'; i++)
 		if (str[i] == ' '){
